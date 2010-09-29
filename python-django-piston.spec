@@ -5,7 +5,7 @@ Version:        0.2.2
 Release:        %mkrel 1
 Summary:        A mini-framework for Django for creating RESTful APIs
 
-Group:          Development/Languages
+Group:          Development/Python
 License:        BSD
 URL:            http://bitbucket.org/jespern/django-piston/
 Source:         http://bitbucket.org/jespern/django-piston/downloads/%{oname}-%{version}.tar.gz
