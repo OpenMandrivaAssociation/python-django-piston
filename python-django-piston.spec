@@ -2,7 +2,7 @@
 
 Name:           python-django-piston
 Version:        0.2.2
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        A mini-framework for Django for creating RESTful APIs
 
 Group:          Development/Python
