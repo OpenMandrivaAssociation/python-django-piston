@@ -1,6 +1,6 @@
 %define oname   django-piston
 %define mercurial_snapshot e539a104d516
-%define rel 1
+%define rel 2
 
 Name:           python-django-piston
 Version:        0.2.3
@@ -15,11 +15,10 @@ Group:          Development/Python
 License:        BSD
 URL:            http://bitbucket.org/jespern/django-piston/
 %if %mercurial_snapshot
-Source:         https://bitbucket.org/jespern/django-piston/get/%{mercurial_snapshot}.tar.bz2
+Source0:        https://bitbucket.org/jespern/django-piston/get/%{mercurial_snapshot}.tar.bz2
 %else
-Source:         http://bitbucket.org/jespern/django-piston/downloads/%{oname}-%{version}.tar.gz
+Source0         http://bitbucket.org/jespern/django-piston/downloads/%{oname}-%{version}.tar.gz
 %endif
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
@@ -40,13 +39,8 @@ touch piston/__init__.py
 %{__python} setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+touch %buildroot/%{python_sitelib}/piston/__init__.py
 
 %files
-%defattr(-,root,root,-)
 %{python_sitelib}/*
-
