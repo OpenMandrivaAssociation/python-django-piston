@@ -13,7 +13,7 @@ Summary:        A mini-framework for Django for creating RESTful APIs
 
 Group:          Development/Python
 License:        BSD
-URL:            http://bitbucket.org/jespern/django-piston/
+URL:            https://bitbucket.org/jespern/django-piston/
 %if %mercurial_snapshot
 Source0:        https://bitbucket.org/jespern/django-piston/get/%{mercurial_snapshot}.tar.bz2
 %else
