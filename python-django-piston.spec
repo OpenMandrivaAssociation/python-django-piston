@@ -5,9 +5,9 @@
 Name:           python-django-piston
 Version:        0.2.3
 %if %mercurial_snapshot
-Release:        %mkrel 0.0.%rel.%mercurial_snapshot
+Release:        1
 %else
-Release:        %mkrel %rel
+Release:        %rel.1
 %endif
 Summary:        A mini-framework for Django for creating RESTful APIs
 
